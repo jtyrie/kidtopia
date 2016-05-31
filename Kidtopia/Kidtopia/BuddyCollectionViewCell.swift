@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BuddyCollectionViewCell: UICollectionViewCell {
     
@@ -16,12 +17,47 @@ class BuddyCollectionViewCell: UICollectionViewCell {
     
     static let defaultReuseIdentifier = String(BuddyCollectionViewCell)
     
+    var player: AVAudioPlayer?
+    
     override func awakeFromNib() {
         frontImageView?.hidden = true
     }
     
+    enum SoundType {
+        
+        case up
+        case down
+        case splash
+        
+        var url: NSURL {
+            switch self {
+            case up:
+                return NSBundle.mainBundle().URLForResource("channel_picker_up", withExtension: "aiff")!
+            case down:
+                return NSBundle.mainBundle().URLForResource("channel_picker_down", withExtension: "aiff")!
+            case splash:
+                return NSBundle.mainBundle().URLForResource("select_show_episode", withExtension: "caf")!
+            }
+        }
+    }
+    
+    func playSound(soundURL: NSURL) {
+        
+        do {
+            player = try AVAudioPlayer(contentsOfURL: soundURL)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+
+    }
+    
     func flipCardUp() {
         if(frontImageView.hidden){
+            playSound(SoundType.up.url)
             UIView.transitionFromView(backImageView, toView: frontImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
             frontImageView?.hidden = false
         }
@@ -29,6 +65,7 @@ class BuddyCollectionViewCell: UICollectionViewCell {
     
     func flipCardDown() {
         if(!frontImageView.hidden){
+            playSound(SoundType.down.url)
             UIView.transitionFromView(frontImageView, toView: backImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
             frontImageView?.hidden = true
         }
@@ -37,6 +74,7 @@ class BuddyCollectionViewCell: UICollectionViewCell {
         let frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
         let splatView = UIImageView(frame: frame)
         
+        playSound(SoundType.splash.url)
         splatView.image = UIImage(named: "splat")
         contentView.addSubview(splatView)
     }
