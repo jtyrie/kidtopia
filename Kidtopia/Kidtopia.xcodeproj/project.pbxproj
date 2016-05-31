@@ -14,6 +14,8 @@
 		6CD74CC81CFD8CCA009F9AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD74CC61CFD8CCA009F9AFD /* LaunchScreen.storyboard */; };
 		6CD74CD31CFD8CCA009F9AFD /* KidtopiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CD21CFD8CCA009F9AFD /* KidtopiaTests.swift */; };
 		6CD74CDE1CFD8CCA009F9AFD /* KidtopiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CDD1CFD8CCA009F9AFD /* KidtopiaUITests.swift */; };
+		6CE229EB1CFDA07D0057AA6D /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE229EA1CFDA07D0057AA6D /* CardDeck.swift */; };
+		6CE229EE1CFDA0AA0057AA6D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE229ED1CFDA0AA0057AA6D /* Card.swift */; };
 		6CE511431CFD96170055A26D /* BuddyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE511421CFD96170055A26D /* BuddyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		6CD74CD91CFD8CCA009F9AFD /* KidtopiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidtopiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CD74CDD1CFD8CCA009F9AFD /* KidtopiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidtopiaUITests.swift; sourceTree = "<group>"; };
 		6CD74CDF1CFD8CCA009F9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CE229EA1CFDA07D0057AA6D /* CardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
+		6CE229ED1CFDA0AA0057AA6D /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6CE511421CFD96170055A26D /* BuddyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,7 @@
 		6CD74CBC1CFD8CCA009F9AFD /* Kidtopia */ = {
 			isa = PBXGroup;
 			children = (
+				6CE229EC1CFDA08C0057AA6D /* Model */,
 				6CD74CBD1CFD8CCA009F9AFD /* AppDelegate.swift */,
 				6CD74CBF1CFD8CCA009F9AFD /* ViewController.swift */,
 				6CD74CC11CFD8CCA009F9AFD /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				6CD74CDF1CFD8CCA009F9AFD /* Info.plist */,
 			);
 			path = KidtopiaUITests;
+			sourceTree = "<group>";
+		};
+		6CE229EC1CFDA08C0057AA6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CE229EA1CFDA07D0057AA6D /* CardDeck.swift */,
+				6CE229ED1CFDA0AA0057AA6D /* Card.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,8 @@
 			files = (
 				6CD74CC01CFD8CCA009F9AFD /* ViewController.swift in Sources */,
 				6CD74CBE1CFD8CCA009F9AFD /* AppDelegate.swift in Sources */,
+				6CE229EE1CFDA0AA0057AA6D /* Card.swift in Sources */,
+				6CE229EB1CFDA07D0057AA6D /* CardDeck.swift in Sources */,
 				6CE511431CFD96170055A26D /* BuddyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
