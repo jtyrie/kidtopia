@@ -10,19 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let cardDeck = CardDeck()
+    private var cardDeck = CardDeck()
     private var lastSelectedCard: Card?
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        cardDeck.shuffle()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }
 
@@ -45,6 +39,8 @@ extension ViewController: UICollectionViewDelegate {
         } else {
             // Flip back
         }
+        
+        lastSelectedCard = card
     }
 
 }

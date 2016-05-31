@@ -12,24 +12,34 @@ struct CardDeck {
     
     static let defaultCount = 6
     
-    var cards = [ Card(buddy: Card.Buddy.bouncy, action: Card.Action.active),
-                  Card(buddy: Card.Buddy.cheeky, action: Card.Action.active),
-                  Card(buddy: Card.Buddy.cool, action: Card.Action.active),
-                  Card(buddy: Card.Buddy.cute, action: Card.Action.active),
-                  Card(buddy: Card.Buddy.friendly, action: Card.Action.active),
-                  Card(buddy: Card.Buddy.geek, action: Card.Action.active),
-                  
-                  Card(buddy: Card.Buddy.bouncy, action: Card.Action.inactive),
-                  Card(buddy: Card.Buddy.cheeky, action: Card.Action.inactive),
-                  Card(buddy: Card.Buddy.cool, action: Card.Action.inactive),
-                  Card(buddy: Card.Buddy.cute, action: Card.Action.inactive),
-                  Card(buddy: Card.Buddy.friendly, action: Card.Action.inactive),
-                  Card(buddy: Card.Buddy.geek, action: Card.Action.inactive)]
+    private let buddies = [ Card.Buddy.bouncy,
+                            Card.Buddy.cheeky,
+                            Card.Buddy.cool,
+                            Card.Buddy.cute,
+                            Card.Buddy.friendly,
+                            Card.Buddy.geek ]
     
+    private let actions = [ Card.Action.active,
+                            Card.Action.inactive ]
     
-    func shuffle() {
+    private var cards: [Card] = []
+    
+    mutating func shuffle() {
         
-        // TODO: 
+        cards = buddies.flatMap { buddy in
+            self.actions.map { action in
+                Card(buddy: buddy, action: action)
+            }
+        }
+        
+        cards.shuffleInPlace()
+        
+        let slice = cards[0 ..< CardDeck.defaultCount / 2]
+        
+        var newCards = Array(slice) + Array(slice)
+        newCards.shuffleInPlace()
+        
+        cards = newCards
     }
     
     func count() -> Int {
@@ -48,3 +58,26 @@ struct CardDeck {
     
 }
 
+// Lazily stolen verbatim from http://stackoverflow.com/questions/24026510/how-do-i-shuffle-an-array-in-swift - it's a hack day!
+extension CollectionType {
+    /// Return a copy of `self` with its elements shuffled
+    func shuffle() -> [Generator.Element] {
+        var list = Array(self)
+        list.shuffleInPlace()
+        return list
+    }
+}
+
+extension MutableCollectionType where Index == Int {
+    /// Shuffle the elements of `self` in-place.
+    mutating func shuffleInPlace() {
+        // empty and single-element collections don't shuffle
+        if count < 2 { return }
+        
+        for i in 0..<count - 1 {
+            let j = Int(arc4random_uniform(UInt32(count - i))) + i
+            guard i != j else { continue }
+            swap(&self[i], &self[j])
+        }
+    }
+}
