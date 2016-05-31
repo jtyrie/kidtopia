@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CD74CBE1CFD8CCA009F9AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CBD1CFD8CCA009F9AFD /* AppDelegate.swift */; };
+		6CD74CC01CFD8CCA009F9AFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CBF1CFD8CCA009F9AFD /* ViewController.swift */; };
+		6CD74CC31CFD8CCA009F9AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD74CC11CFD8CCA009F9AFD /* Main.storyboard */; };
+		6CD74CC51CFD8CCA009F9AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CD74CC41CFD8CCA009F9AFD /* Assets.xcassets */; };
+		6CD74CC81CFD8CCA009F9AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD74CC61CFD8CCA009F9AFD /* LaunchScreen.storyboard */; };
+		6CD74CD31CFD8CCA009F9AFD /* KidtopiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CD21CFD8CCA009F9AFD /* KidtopiaTests.swift */; };
+		6CD74CDE1CFD8CCA009F9AFD /* KidtopiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD74CDD1CFD8CCA009F9AFD /* KidtopiaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CD74CCF1CFD8CCA009F9AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CD74CB21CFD8CCA009F9AFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CD74CB91CFD8CCA009F9AFD;
+			remoteInfo = Kidtopia;
+		};
+		6CD74CDA1CFD8CCA009F9AFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CD74CB21CFD8CCA009F9AFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CD74CB91CFD8CCA009F9AFD;
+			remoteInfo = Kidtopia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6CD74CBA1CFD8CCA009F9AFD /* Kidtopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kidtopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD74CBD1CFD8CCA009F9AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CD74CBF1CFD8CCA009F9AFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CD74CC21CFD8CCA009F9AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CD74CC41CFD8CCA009F9AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CD74CC71CFD8CCA009F9AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CD74CC91CFD8CCA009F9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CD74CCE1CFD8CCA009F9AFD /* KidtopiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidtopiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD74CD21CFD8CCA009F9AFD /* KidtopiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidtopiaTests.swift; sourceTree = "<group>"; };
+		6CD74CD41CFD8CCA009F9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CD74CD91CFD8CCA009F9AFD /* KidtopiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KidtopiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD74CDD1CFD8CCA009F9AFD /* KidtopiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidtopiaUITests.swift; sourceTree = "<group>"; };
+		6CD74CDF1CFD8CCA009F9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CD74CB71CFD8CCA009F9AFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CCB1CFD8CCA009F9AFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CD61CFD8CCA009F9AFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CD74CB11CFD8CCA009F9AFD = {
+			isa = PBXGroup;
+			children = (
+				6CD74CBC1CFD8CCA009F9AFD /* Kidtopia */,
+				6CD74CD11CFD8CCA009F9AFD /* KidtopiaTests */,
+				6CD74CDC1CFD8CCA009F9AFD /* KidtopiaUITests */,
+				6CD74CBB1CFD8CCA009F9AFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CD74CBB1CFD8CCA009F9AFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CD74CBA1CFD8CCA009F9AFD /* Kidtopia.app */,
+				6CD74CCE1CFD8CCA009F9AFD /* KidtopiaTests.xctest */,
+				6CD74CD91CFD8CCA009F9AFD /* KidtopiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CD74CBC1CFD8CCA009F9AFD /* Kidtopia */ = {
+			isa = PBXGroup;
+			children = (
+				6CD74CBD1CFD8CCA009F9AFD /* AppDelegate.swift */,
+				6CD74CBF1CFD8CCA009F9AFD /* ViewController.swift */,
+				6CD74CC11CFD8CCA009F9AFD /* Main.storyboard */,
+				6CD74CC41CFD8CCA009F9AFD /* Assets.xcassets */,
+				6CD74CC61CFD8CCA009F9AFD /* LaunchScreen.storyboard */,
+				6CD74CC91CFD8CCA009F9AFD /* Info.plist */,
+			);
+			path = Kidtopia;
+			sourceTree = "<group>";
+		};
+		6CD74CD11CFD8CCA009F9AFD /* KidtopiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CD74CD21CFD8CCA009F9AFD /* KidtopiaTests.swift */,
+				6CD74CD41CFD8CCA009F9AFD /* Info.plist */,
+			);
+			path = KidtopiaTests;
+			sourceTree = "<group>";
+		};
+		6CD74CDC1CFD8CCA009F9AFD /* KidtopiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6CD74CDD1CFD8CCA009F9AFD /* KidtopiaUITests.swift */,
+				6CD74CDF1CFD8CCA009F9AFD /* Info.plist */,
+			);
+			path = KidtopiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CD74CB91CFD8CCA009F9AFD /* Kidtopia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CD74CE21CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "Kidtopia" */;
+			buildPhases = (
+				6CD74CB61CFD8CCA009F9AFD /* Sources */,
+				6CD74CB71CFD8CCA009F9AFD /* Frameworks */,
+				6CD74CB81CFD8CCA009F9AFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kidtopia;
+			productName = Kidtopia;
+			productReference = 6CD74CBA1CFD8CCA009F9AFD /* Kidtopia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CD74CCD1CFD8CCA009F9AFD /* KidtopiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CD74CE51CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "KidtopiaTests" */;
+			buildPhases = (
+				6CD74CCA1CFD8CCA009F9AFD /* Sources */,
+				6CD74CCB1CFD8CCA009F9AFD /* Frameworks */,
+				6CD74CCC1CFD8CCA009F9AFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CD74CD01CFD8CCA009F9AFD /* PBXTargetDependency */,
+			);
+			name = KidtopiaTests;
+			productName = KidtopiaTests;
+			productReference = 6CD74CCE1CFD8CCA009F9AFD /* KidtopiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CD74CD81CFD8CCA009F9AFD /* KidtopiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CD74CE81CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "KidtopiaUITests" */;
+			buildPhases = (
+				6CD74CD51CFD8CCA009F9AFD /* Sources */,
+				6CD74CD61CFD8CCA009F9AFD /* Frameworks */,
+				6CD74CD71CFD8CCA009F9AFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CD74CDB1CFD8CCA009F9AFD /* PBXTargetDependency */,
+			);
+			name = KidtopiaUITests;
+			productName = KidtopiaUITests;
+			productReference = 6CD74CD91CFD8CCA009F9AFD /* KidtopiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CD74CB21CFD8CCA009F9AFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Sky;
+				TargetAttributes = {
+					6CD74CB91CFD8CCA009F9AFD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					6CD74CCD1CFD8CCA009F9AFD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6CD74CB91CFD8CCA009F9AFD;
+					};
+					6CD74CD81CFD8CCA009F9AFD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6CD74CB91CFD8CCA009F9AFD;
+					};
+				};
+			};
+			buildConfigurationList = 6CD74CB51CFD8CCA009F9AFD /* Build configuration list for PBXProject "Kidtopia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CD74CB11CFD8CCA009F9AFD;
+			productRefGroup = 6CD74CBB1CFD8CCA009F9AFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CD74CB91CFD8CCA009F9AFD /* Kidtopia */,
+				6CD74CCD1CFD8CCA009F9AFD /* KidtopiaTests */,
+				6CD74CD81CFD8CCA009F9AFD /* KidtopiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CD74CB81CFD8CCA009F9AFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD74CC81CFD8CCA009F9AFD /* LaunchScreen.storyboard in Resources */,
+				6CD74CC51CFD8CCA009F9AFD /* Assets.xcassets in Resources */,
+				6CD74CC31CFD8CCA009F9AFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CCC1CFD8CCA009F9AFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CD71CFD8CCA009F9AFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CD74CB61CFD8CCA009F9AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD74CC01CFD8CCA009F9AFD /* ViewController.swift in Sources */,
+				6CD74CBE1CFD8CCA009F9AFD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CCA1CFD8CCA009F9AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD74CD31CFD8CCA009F9AFD /* KidtopiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CD74CD51CFD8CCA009F9AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD74CDE1CFD8CCA009F9AFD /* KidtopiaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CD74CD01CFD8CCA009F9AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CD74CB91CFD8CCA009F9AFD /* Kidtopia */;
+			targetProxy = 6CD74CCF1CFD8CCA009F9AFD /* PBXContainerItemProxy */;
+		};
+		6CD74CDB1CFD8CCA009F9AFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CD74CB91CFD8CCA009F9AFD /* Kidtopia */;
+			targetProxy = 6CD74CDA1CFD8CCA009F9AFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6CD74CC11CFD8CCA009F9AFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CD74CC21CFD8CCA009F9AFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CD74CC61CFD8CCA009F9AFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CD74CC71CFD8CCA009F9AFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CD74CE01CFD8CCA009F9AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		6CD74CE11CFD8CCA009F9AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CD74CE31CFD8CCA009F9AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Kidtopia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.Kidtopia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6CD74CE41CFD8CCA009F9AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Kidtopia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.Kidtopia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6CD74CE61CFD8CCA009F9AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KidtopiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.KidtopiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kidtopia.app/Kidtopia";
+			};
+			name = Debug;
+		};
+		6CD74CE71CFD8CCA009F9AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KidtopiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.KidtopiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kidtopia.app/Kidtopia";
+			};
+			name = Release;
+		};
+		6CD74CE91CFD8CCA009F9AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KidtopiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.KidtopiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Kidtopia;
+			};
+			name = Debug;
+		};
+		6CD74CEA1CFD8CCA009F9AFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KidtopiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.KidtopiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Kidtopia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CD74CB51CFD8CCA009F9AFD /* Build configuration list for PBXProject "Kidtopia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD74CE01CFD8CCA009F9AFD /* Debug */,
+				6CD74CE11CFD8CCA009F9AFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CD74CE21CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "Kidtopia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD74CE31CFD8CCA009F9AFD /* Debug */,
+				6CD74CE41CFD8CCA009F9AFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6CD74CE51CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "KidtopiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD74CE61CFD8CCA009F9AFD /* Debug */,
+				6CD74CE71CFD8CCA009F9AFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6CD74CE81CFD8CCA009F9AFD /* Build configuration list for PBXNativeTarget "KidtopiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CD74CE91CFD8CCA009F9AFD /* Debug */,
+				6CD74CEA1CFD8CCA009F9AFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CD74CB21CFD8CCA009F9AFD /* Project object */;
+}
