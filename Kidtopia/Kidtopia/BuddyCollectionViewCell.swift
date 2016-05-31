@@ -76,6 +76,7 @@ class BuddyCollectionViewCell: UICollectionViewCell {
         
         playSound(SoundType.splash.url)
         splatView.image = UIImage(named: "splat")
-        contentView.addSubview(splatView)
+
+        contentView.insertSubview(splatView, atIndex: 0)
     }
 }

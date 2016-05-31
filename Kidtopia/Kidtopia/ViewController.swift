@@ -40,18 +40,20 @@ extension ViewController: UICollectionViewDelegate {
             }
             
             let lastSelectedCard = cardDeck.cardAtIndex(indexPathForLastSelectedItem.item)
-            
+            let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
             if lastSelectedCard?.isEqualToCard(card) == true {
-                
-                // Splat
                 cell.flipCardUp(nil);
                 self.indexPathForLastSelectedItem = nil
+                
+                // Splat
+                cell.splashCell()
+                lastSelectedCell?.splashCell()
                 
             } else {
                 cell.flipCardUp({ finished in
                     cell.flipCardDown()
                     
-                    let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
+                    //let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
                     lastSelectedCell?.flipCardDown()
                     
                     self.indexPathForLastSelectedItem = nil
