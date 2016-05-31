@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     private var cardDeck = CardDeck()
-    private var lastSelectedCard: Card?
-
+    private var indexPathForLastSelectedItem: NSIndexPath?
+    
     override func viewDidLoad() {
         
         cardDeck.shuffle()
@@ -22,27 +22,51 @@ class ViewController: UIViewController {
 
 
 extension ViewController: UICollectionViewDelegate {
-
+    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? BuddyCollectionViewCell else {
             return
         }
-        cell.flipCardUp()
         
         guard let card = cardDeck.cardAtIndex(indexPath.row) else {
             return
         }
-        
-        if lastSelectedCard?.isEqualToCard(card) == true {
-            // Splat
+    
+        if indexPathForLastSelectedItem != nil {
+            
+            guard let indexPathForLastSelectedItem = indexPathForLastSelectedItem else {
+                return
+            }
+            
+            let lastSelectedCard = cardDeck.cardAtIndex(indexPathForLastSelectedItem.item)
+            
+            if lastSelectedCard?.isEqualToCard(card) == true {
+                
+                // Splat
+                cell.flipCardUp(nil);
+                self.indexPathForLastSelectedItem = nil
+                
+            } else {
+                cell.flipCardUp({ finished in
+                    cell.flipCardDown()
+                    
+                    let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
+                    lastSelectedCell?.flipCardDown()
+                    
+                    self.indexPathForLastSelectedItem = nil
+                })
+            }
+            
         } else {
-            // Flip back
+            
+            cell.flipCardUp(nil);
+            indexPathForLastSelectedItem = indexPath
         }
         
-        lastSelectedCard = card
+        
     }
-
+    
 }
 
 
@@ -59,6 +83,16 @@ extension ViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BuddyCollectionViewCell.defaultReuseIdentifier,
                                                                          forIndexPath: indexPath)
+        
+        if let cell = cell as? BuddyCollectionViewCell {
+            
+            if let card = cardDeck.cardAtIndex(indexPath.row) {
+                
+                // TODO: Fix this so card.action doesn't need to be passed back to card.buddy.filename.
+                cell.frontImageView.image = UIImage(named: card.buddy.filename(card.action))
+            }
+        }
+        
         
         return cell
     }
