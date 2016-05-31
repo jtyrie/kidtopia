@@ -27,9 +27,12 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
+        guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? BuddyCollectionViewCell else {
+            return
+        }
+        cell.flipCardUp()
     }
-    
+
 }
 
 
