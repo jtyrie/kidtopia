@@ -9,7 +9,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kidtopia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -29,27 +28,37 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BuddyCollectionViewCell" id="PwS-rj-QJl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BuddyCollectionViewCell" id="PwS-rj-QJl" customClass="BuddyCollectionViewCell" customModule="Kidtopia" customModuleProvider="target">
                                         <rect key="frame" x="137.5" y="100" width="285" height="290"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="285" height="290"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bouncy" translatesAutoresizingMaskIntoConstraints="NO" id="sht-Ac-IVl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="sht-Ac-IVl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="285" height="290"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IzN-ML-rb1">
                                                     <rect key="frame" x="0.0" y="0.0" width="285" height="290"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="sht-Ac-IVl" firstAttribute="top" secondItem="PwS-rj-QJl" secondAttribute="topMargin" id="2Rw-if-BRO"/>
+                                            <constraint firstItem="IzN-ML-rb1" firstAttribute="trailing" secondItem="PwS-rj-QJl" secondAttribute="trailingMargin" id="547-Rz-lF2"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="sht-Ac-IVl" secondAttribute="bottom" id="KUY-Sy-og2"/>
                                             <constraint firstItem="sht-Ac-IVl" firstAttribute="leading" secondItem="PwS-rj-QJl" secondAttribute="leadingMargin" id="biW-4D-jXY"/>
+                                            <constraint firstItem="IzN-ML-rb1" firstAttribute="leading" secondItem="PwS-rj-QJl" secondAttribute="leadingMargin" id="m6T-Fs-qso"/>
+                                            <constraint firstItem="IzN-ML-rb1" firstAttribute="top" secondItem="PwS-rj-QJl" secondAttribute="topMargin" id="tIS-U5-ULN"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="sht-Ac-IVl" secondAttribute="trailing" id="xCt-jY-jin"/>
+                                            <constraint firstItem="IzN-ML-rb1" firstAttribute="bottom" secondItem="PwS-rj-QJl" secondAttribute="bottomMargin" id="zvh-jP-g1o"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                        <connections>
+                                            <outlet property="backImageView" destination="sht-Ac-IVl" id="Q9e-Ay-VWg"/>
+                                            <outlet property="frontImageView" destination="IzN-ML-rb1" id="MLs-Mf-j3p"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qJy-DW-yfN">
@@ -71,11 +80,12 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="445" y="429"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bouncy" width="2813" height="3333"/>
+        <image name="cover" width="282" height="263"/>
     </resources>
 </document>
