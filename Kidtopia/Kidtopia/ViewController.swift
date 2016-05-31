@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView?
+
     private var cardDeck = CardDeck()
     private var indexPathForLastSelectedItem: NSIndexPath?
     
@@ -20,6 +22,29 @@ class ViewController: UIViewController {
     
 }
 
+// MARK: - Actions
+extension ViewController {
+    
+    @IBAction func restart(sender: UIButton) {
+        
+        guard let indexPathsForVisibleItems = collectionView?.indexPathsForVisibleItems() else {
+            return
+        }
+        
+        for indexPath in indexPathsForVisibleItems {
+            
+            guard let cell = collectionView?.cellForItemAtIndexPath(indexPath) as? BuddyCollectionViewCell else {
+                continue
+            }
+            
+            cell.flipCardDown()
+        }
+        
+        self.cardDeck.shuffle()
+        self.indexPathForLastSelectedItem = nil
+        collectionView?.reloadData()
+    }
+}
 
 extension ViewController: UICollectionViewDelegate {
     
@@ -69,7 +94,6 @@ extension ViewController: UICollectionViewDelegate {
     
 }
 
-
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView,
@@ -97,10 +121,36 @@ extension ViewController: UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    func collectionView(collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                                                          atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         
-        let view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath)
+        var view: UICollectionReusableView
+        
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader,
+                                                                         withReuseIdentifier: "header",
+                                                                         forIndexPath: indexPath)
+        case UICollectionElementKindSectionFooter:
+            view = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter,
+                                                                         withReuseIdentifier: "bottom",
+                                                                         forIndexPath: indexPath)
+            
+        default:
+            view = UICollectionReusableView()
+        }
         
         return view
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSize(width: 290, height: 290)
     }
 }
