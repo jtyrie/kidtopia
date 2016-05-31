@@ -16,6 +16,7 @@ class BuddyCollectionViewCell: UICollectionViewCell {
     
     static let defaultReuseIdentifier = String(BuddyCollectionViewCell)
     
+    var splashImageView: UIImageView?
     var player: AVAudioPlayer?
     
     override func awakeFromNib() {
@@ -72,10 +73,16 @@ class BuddyCollectionViewCell: UICollectionViewCell {
     
     func splashCell() {
         let frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
-        let splatView = UIImageView(frame: frame)
+        splashImageView = UIImageView(frame: frame)
         
         playSound(SoundType.splash.url)
-        splatView.image = UIImage(named: "splat")
-        contentView.addSubview(splatView)
+        guard let splashImageView = splashImageView else { return }
+        splashImageView.image = UIImage(named: "splat")
+
+        contentView.insertSubview(splashImageView, atIndex: 0)
+    }
+    
+    func removeSplashCell() {
+        splashImageView?.removeFromSuperview()
     }
 }

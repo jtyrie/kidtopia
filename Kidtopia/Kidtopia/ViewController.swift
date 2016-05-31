@@ -37,6 +37,7 @@ extension ViewController {
                 continue
             }
             
+            cell.removeSplashCell()
             cell.flipCardDown()
         }
         
@@ -65,18 +66,22 @@ extension ViewController: UICollectionViewDelegate {
             }
             
             let lastSelectedCard = cardDeck.cardAtIndex(indexPathForLastSelectedItem.item)
-            
+            let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
             if lastSelectedCard?.isEqualToCard(card) == true {
+                cell.flipCardUp({ finished in
+                    cell.splashCell()
+                    lastSelectedCell?.splashCell()
+                });
+                self.indexPathForLastSelectedItem = nil
                 
                 // Splat
-                cell.flipCardUp(nil);
-                self.indexPathForLastSelectedItem = nil
+                
                 
             } else {
                 cell.flipCardUp({ finished in
                     cell.flipCardDown()
                     
-                    let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
+                    //let lastSelectedCell = collectionView.cellForItemAtIndexPath(indexPathForLastSelectedItem) as? BuddyCollectionViewCell
                     lastSelectedCell?.flipCardDown()
                     
                     self.indexPathForLastSelectedItem = nil
