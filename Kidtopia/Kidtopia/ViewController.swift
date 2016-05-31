@@ -23,3 +23,30 @@ class ViewController: UIViewController {
 
 }
 
+
+extension ViewController: UICollectionViewDelegate {
+
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+}
+
+
+extension ViewController: UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
+        return 6
+    }
+    
+    func collectionView(collectionView: UICollectionView,
+                        cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BuddyCollectionViewCell.defaultReuseIdentifier,
+                                                                         forIndexPath: indexPath)
+        
+        return cell
+    }
+}
