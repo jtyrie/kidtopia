@@ -9,28 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    
+    private let cardDeck = CardDeck()
+    private var lastSelectedCard: Card?
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
 
 extension ViewController: UICollectionViewDelegate {
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
         guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? BuddyCollectionViewCell else {
             return
         }
         cell.flipCardUp()
+        
+        guard let card = cardDeck.cardAtIndex(indexPath.row) else {
+            return
+        }
+        
+        if lastSelectedCard?.isEqualToCard(card) == true {
+            // Splat
+        } else {
+            // Flip back
+        }
     }
 
 }
@@ -41,7 +50,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        return 6
+        return cardDeck.count()
     }
     
     func collectionView(collectionView: UICollectionView,
@@ -51,5 +60,9 @@ extension ViewController: UICollectionViewDataSource {
                                                                          forIndexPath: indexPath)
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        <#code#>
     }
 }
