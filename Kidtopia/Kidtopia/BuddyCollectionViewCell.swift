@@ -11,9 +11,8 @@ import AVFoundation
 
 class BuddyCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet  var backImageView: UIImageView!
-    
-    @IBOutlet  var frontImageView: UIImageView!
+    @IBOutlet var backImageView: UIImageView!
+    @IBOutlet var frontImageView: UIImageView!
     
     static let defaultReuseIdentifier = String(BuddyCollectionViewCell)
     
@@ -70,6 +69,7 @@ class BuddyCollectionViewCell: UICollectionViewCell {
             frontImageView?.hidden = true
         }
     }
+    
     func splashCell() {
         let frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
         let splatView = UIImageView(frame: frame)
