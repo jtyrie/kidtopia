@@ -17,6 +17,10 @@
 		6CE229EB1CFDA07D0057AA6D /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE229EA1CFDA07D0057AA6D /* CardDeck.swift */; };
 		6CE229EE1CFDA0AA0057AA6D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE229ED1CFDA0AA0057AA6D /* Card.swift */; };
 		6CE511431CFD96170055A26D /* BuddyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE511421CFD96170055A26D /* BuddyCollectionViewCell.swift */; };
+		EB97DDE21CFDD862009F3466 /* channel_picker_down.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EB97DDDE1CFDD862009F3466 /* channel_picker_down.aiff */; };
+		EB97DDE31CFDD862009F3466 /* channel_picker_up.aiff in Resources */ = {isa = PBXBuildFile; fileRef = EB97DDDF1CFDD862009F3466 /* channel_picker_up.aiff */; };
+		EB97DDE41CFDD862009F3466 /* navigate_channel.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB97DDE01CFDD862009F3466 /* navigate_channel.caf */; };
+		EB97DDE51CFDD862009F3466 /* select_show_episode.caf in Resources */ = {isa = PBXBuildFile; fileRef = EB97DDE11CFDD862009F3466 /* select_show_episode.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		6CE229EA1CFDA07D0057AA6D /* CardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 		6CE229ED1CFDA0AA0057AA6D /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		6CE511421CFD96170055A26D /* BuddyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB97DDDE1CFDD862009F3466 /* channel_picker_down.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = channel_picker_down.aiff; path = ../Assets/audio/channel_picker_down.aiff; sourceTree = "<group>"; };
+		EB97DDDF1CFDD862009F3466 /* channel_picker_up.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = channel_picker_up.aiff; path = ../Assets/audio/channel_picker_up.aiff; sourceTree = "<group>"; };
+		EB97DDE01CFDD862009F3466 /* navigate_channel.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = navigate_channel.caf; path = ../Assets/audio/navigate_channel.caf; sourceTree = "<group>"; };
+		EB97DDE11CFDD862009F3466 /* select_show_episode.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = select_show_episode.caf; path = ../Assets/audio/select_show_episode.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		6CD74CBC1CFD8CCA009F9AFD /* Kidtopia */ = {
 			isa = PBXGroup;
 			children = (
+				EB97DDE61CFDD870009F3466 /* Audio */,
 				6CE229EC1CFDA08C0057AA6D /* Model */,
 				6CD74CBD1CFD8CCA009F9AFD /* AppDelegate.swift */,
 				6CD74CBF1CFD8CCA009F9AFD /* ViewController.swift */,
@@ -140,6 +149,17 @@
 				6CE229ED1CFDA0AA0057AA6D /* Card.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EB97DDE61CFDD870009F3466 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				EB97DDDE1CFDD862009F3466 /* channel_picker_down.aiff */,
+				EB97DDDF1CFDD862009F3466 /* channel_picker_up.aiff */,
+				EB97DDE01CFDD862009F3466 /* navigate_channel.caf */,
+				EB97DDE11CFDD862009F3466 /* select_show_episode.caf */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB97DDE21CFDD862009F3466 /* channel_picker_down.aiff in Resources */,
+				EB97DDE31CFDD862009F3466 /* channel_picker_up.aiff in Resources */,
+				EB97DDE41CFDD862009F3466 /* navigate_channel.caf in Resources */,
+				EB97DDE51CFDD862009F3466 /* select_show_episode.caf in Resources */,
 				6CD74CC81CFD8CCA009F9AFD /* LaunchScreen.storyboard in Resources */,
 				6CD74CC51CFD8CCA009F9AFD /* Assets.xcassets in Resources */,
 				6CD74CC31CFD8CCA009F9AFD /* Main.storyboard in Resources */,
