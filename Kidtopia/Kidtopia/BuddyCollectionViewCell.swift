@@ -11,9 +11,9 @@ import AVFoundation
 
 class BuddyCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private var backImageView: UIImageView!
+    @IBOutlet  var backImageView: UIImageView!
     
-    @IBOutlet private var frontImageView: UIImageView!
+    @IBOutlet  var frontImageView: UIImageView!
     
     static let defaultReuseIdentifier = String(BuddyCollectionViewCell)
     
@@ -55,10 +55,10 @@ class BuddyCollectionViewCell: UICollectionViewCell {
 
     }
     
-    func flipCardUp() {
+    func flipCardUp(completion: ((Bool) -> Void)?) {
         if(frontImageView.hidden){
             playSound(SoundType.up.url)
-            UIView.transitionFromView(backImageView, toView: frontImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+            UIView.transitionFromView(backImageView, toView: frontImageView, duration: 1, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: completion)
             frontImageView?.hidden = false
         }
     }

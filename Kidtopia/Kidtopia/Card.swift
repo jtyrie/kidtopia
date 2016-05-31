@@ -20,6 +20,33 @@ struct Card {
         case cute
         case friendly
         case geek
+        
+        func filename(action: Action) -> String {
+            
+            switch action {
+            case .inactive:
+                return self.description
+            case .active:
+                return "sky_buddy_\(self.description)_active"
+            }
+        }
+        
+        var description: String {
+            switch self {
+            case .bouncy:
+                return "bouncy"
+            case .cheeky:
+                return "cheeky"
+            case .cool:
+                return "cool"
+            case .cute:
+                return "cute"
+            case .friendly:
+                return "friendly"
+            case .geek:
+                return "geek"
+            }
+        }
     }
     
     enum Action {
