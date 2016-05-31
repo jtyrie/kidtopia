@@ -10,7 +10,7 @@ import Foundation
 
 struct CardDeck {
     
-    static let defaultCount = 6
+    static let defaultCount = 8
     
     private let buddies = [ Card.Buddy.bouncy,
                             Card.Buddy.cheeky,
