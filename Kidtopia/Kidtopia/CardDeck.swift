@@ -20,7 +20,8 @@ struct CardDeck {
                             Card.Buddy.geek ]
     
     private let actions = [ Card.Action.active,
-                            Card.Action.inactive ]
+//                            Card.Action.inactive
+    ]
     
     private var cards: [Card] = []
     

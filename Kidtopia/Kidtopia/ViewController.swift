@@ -119,6 +119,7 @@ extension ViewController: UICollectionViewDataSource {
                 
                 // TODO: Fix this so card.action doesn't need to be passed back to card.buddy.filename.
                 cell.frontImageView.image = UIImage(named: card.buddy.filename(card.action))
+                
             }
         }
         
